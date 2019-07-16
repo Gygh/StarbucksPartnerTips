@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#92E9E6"
+    tools:context="edu.asu.bsse.ajfioren.starbuckspartnertips.MainActivity">
+
+    <TextView
+        android:id="@+id/descriptionLab2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="69dp"
+        android:gravity="left"
+        android:text="Tips $/hour: "
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/addButt"
+        app:layout_constraintEnd_toStartOf="@+id/tipsPerHourET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionLab" />
+
+    <TextView
+        android:id="@+id/info_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="26dp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:text="Partner Information"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintBottom_toTopOf="@+id/selectSpinner1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="46dp"
+        android:gravity="left"
+        android:text="Name"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionLab"
+        app:layout_constraintEnd_toStartOf="@+id/nameET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectSpinner1" />
+
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="83dp"
+        android:editable="true"
+        android:gravity="right"
+        android:hint=""
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tippableHoursET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nameLabel"
+        app:layout_constraintTop_toTopOf="@+id/selectSpinner1" />
+
+
+    <TextView
+        android:id="@+id/descriptionLab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="45dp"
+        android:gravity="left"
+        android:text="Tippable Hours"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/descriptionLab2"
+        app:layout_constraintEnd_toStartOf="@+id/tippableHoursET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+    <EditText
+        android:id="@+id/tippableHoursET"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="82dp"
+        android:editable="true"
+        android:gravity="right"
+        android:hint=""
+        android:imeOptions="actionNext"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toBottomOf="@+id/descriptionLab2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/descriptionLab"
+        app:layout_constraintTop_toTopOf="@+id/nameLabel" />
+
+
+    <EditText
+        android:id="@+id/tipsPerHourET"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="110dp"
+        android:editable="true"
+        android:gravity="right"
+        android:hint=""
+        android:imeOptions="actionNext"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toBottomOf="@+id/addButt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/descriptionLab2"
+        app:layout_constraintTop_toBottomOf="@+id/nameET" />
+
+    <Button
+        android:id="@+id/addButt"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="42dp"
+        android:onClick="addClicked"
+        android:text="Add"
+        app:layout_constraintBottom_toTopOf="@+id/tipsET"
+        app:layout_constraintEnd_toStartOf="@+id/removeButt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionLab2" />
+
+    <Button
+        android:id="@+id/removeButt"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="removeClicked"
+        android:text="Remove"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addButt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addButt" />
+
+    <Spinner
+        android:id="@+id/selectSpinner1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="57dp"
+        app:layout_constraintBottom_toTopOf="@+id/nameLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_title" />
+
+    <EditText
+        android:id="@+id/tipsET"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="104dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/addButt" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="6dp"
+        android:text="Tips:"
+        app:layout_constraintBottom_toBottomOf="@+id/tipsET"
+        app:layout_constraintEnd_toStartOf="@+id/tipsET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tipsET" />
+
+    <android.support.constraint.Constraints
+        android:id="@+id/constraints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
