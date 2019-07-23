@@ -1,3 +1,7 @@
+What's New:
+- Compiled and Uploaded APK so that user's can transfer it directly to an android device to run
+- See issues tab for expected changes on further releases.
+
 # StarbucksPartnerTips
 An open source, independantly developed application to facilitate doing the weekly tips. 
 The dollar per hour amount for tips needs to be worked out by hand, but after that, each partner can be entered individually 
